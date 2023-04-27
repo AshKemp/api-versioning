@@ -1,0 +1,30 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Webpack directories
+.webpack
+
+.env
+
+.env.local
+
+yarn-error.log
+
+mikro-orm.config.ts
+
+config.cfg
+
+__pycache__
+
+_webpack
+
+_build
+
+tmp
+test.py
+
+env
