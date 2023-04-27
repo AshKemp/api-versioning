@@ -37,6 +37,7 @@ const serverlessConfiguration: AWS = {
       platform: "node",
       concurrency: 10,
     },
+    stage: "${opt:stage, self:provider.stage}",
   },
 };
 
