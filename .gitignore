@@ -10,6 +10,8 @@ jspm_packages
 
 .env
 
+.esbuild
+
 .env.local
 
 yarn-error.log
