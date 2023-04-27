@@ -9,7 +9,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
-    stage: "v1",
+    stage: "v2",
     stackName: "${self:service}-stack-${self:provider.stage}",
     apiName: "${self:service}-${self:provider.stage}",
     region: "us-west-2",
