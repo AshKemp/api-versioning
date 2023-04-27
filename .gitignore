@@ -8,6 +8,8 @@ jspm_packages
 # Webpack directories
 .webpack
 
+.esbuild
+
 .env
 
 .env.local
