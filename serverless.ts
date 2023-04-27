@@ -11,7 +11,7 @@ const serverlessConfiguration: AWS = {
     runtime: "nodejs14.x",
     stage: "v1",
     stackName: "${self:service}-stack-${self:provider.stage}",
-    apiName: "${self:service}",
+    apiName: "${self:service}-${self:provider.stage}",
     region: "us-west-2",
     endpointType: "regional",
     apiGateway: {
