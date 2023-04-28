@@ -9,7 +9,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
-    stage: "v1",
+    // stage: "v1",
     // stackName: "${self:service}-stack-${self:provider.stage}",
     // apiName: "${self:service}-${self:provider.stage}",
     region: "us-west-2",
@@ -37,7 +37,7 @@ const serverlessConfiguration: AWS = {
       platform: "node",
       concurrency: 10,
     },
-    stage: "${opt:stage, self:provider.stage}",
+    // stage: "${opt:stage, self:provider.stage}",
   },
 };
 
