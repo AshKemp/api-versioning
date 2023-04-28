@@ -2,6 +2,10 @@ import type { AWS } from "@serverless/typescript";
 
 import functions from "@functions/index";
 
+const dotenv = require("dotenv");
+
+dotenv.config({ path: ".env.local" });
+
 const serverlessConfiguration: AWS = {
   service: "serverless-hello-world",
   frameworkVersion: "3",
@@ -9,9 +13,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
-    // stage: "v1",
-    // stackName: "${self:service}-stack-${self:provider.stage}",
-    // apiName: "${self:service}-${self:provider.stage}",
+    stage: process.env.API_VERSION_STAGE,
     region: "us-west-2",
     endpointType: "regional",
     apiGateway: {
@@ -21,6 +23,7 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
+      API_VERSION_STAGE: "${env:API_VERSION_STAGE}",
     },
   },
   // import the function via paths
@@ -37,7 +40,6 @@ const serverlessConfiguration: AWS = {
       platform: "node",
       concurrency: 10,
     },
-    // stage: "${opt:stage, self:provider.stage}",
   },
 };
 
