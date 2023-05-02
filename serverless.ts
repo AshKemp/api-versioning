@@ -19,6 +19,8 @@ const serverlessConfiguration: AWS = {
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
+      restApiId: "03wo6guqe5",
+      restApiRootResourceId: "d1gggbowwh",
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
@@ -40,7 +42,7 @@ const serverlessConfiguration: AWS = {
     //   platform: "node",
     //   concurrency: 10,
     // },
-    stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
+    // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
   },
 };
 
