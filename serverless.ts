@@ -19,7 +19,7 @@ const serverlessConfiguration: AWS = {
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
-      restApiId: "03wo6guqe5",
+      restApiId: process.env,
       restApiRootResourceId: "d1gggbowwh",
     },
     environment: {
