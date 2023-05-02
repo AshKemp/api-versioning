@@ -40,6 +40,7 @@ const serverlessConfiguration: AWS = {
     //   platform: "node",
     //   concurrency: 10,
     // },
+    stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
   },
 };
 
