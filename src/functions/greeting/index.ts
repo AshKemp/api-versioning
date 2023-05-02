@@ -6,7 +6,7 @@ export default {
     {
       http: {
         method: "get",
-        path: "greeting",
+        path: `${process.env.API_VERSION_STAGE}/greeting`,
       },
     },
   ],
