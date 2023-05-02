@@ -44,6 +44,34 @@ const serverlessConfiguration: AWS = {
     // },
     // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
   },
+  resources: {
+    Resources: {
+      MyAPIGw: {
+        Type: "AWS::ApiGateway::RestApi",
+        Properties: {
+          Name: "MyApiGw",
+        },
+      },
+    },
+    Outputs: {
+      apiGatewayRestApiId: {
+        Value: {
+          Ref: "MyApiGW",
+        },
+        Export: {
+          Name: "MyApiGateway-restApiId",
+        },
+      },
+      apiGatewayRestApiRootResourceId: {
+        Value: {
+          "Fn::GetAtt": ["MyApiGW", "RootResourceId"],
+        },
+        Export: {
+          Name: "MyApiGateway-rootResourceId",
+        },
+      },
+    },
+  },
 };
 
 module.exports = serverlessConfiguration;
