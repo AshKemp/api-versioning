@@ -56,16 +56,19 @@ const serverlessConfiguration: AWS = {
     Outputs: {
       apiGatewayRestApiId: {
         Value: {
-          Ref: "MyApiGW",
+          Ref: process.env.CLIENT_API_REST_API_ID,
         },
         Export: {
           Name: "MyApiGateway-restApiId",
         },
       },
       apiGatewayRestApiRootResourceId: {
-        Value: {
-          "Fn::GetAtt": ["MyApiGW", "RootResourceId"],
-        },
+        Value:
+          // {
+          // "Fn::GetAtt": ["MyApiGW", "RootResourceId"],
+          process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
+
+        // },
         Export: {
           Name: "MyApiGateway-rootResourceId",
         },
