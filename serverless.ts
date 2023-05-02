@@ -42,38 +42,7 @@ const serverlessConfiguration: AWS = {
     //   platform: "node",
     //   concurrency: 10,
     // },
-    stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
-  },
-  resources: {
-    Resources: {
-      MyAPIGw: {
-        Type: "AWS::ApiGateway::RestApi",
-        Properties: {
-          Name: "MyApiGw",
-        },
-      },
-    },
-    Outputs: {
-      apiGatewayRestApiId: {
-        Value: {
-          Ref: process.env.CLIENT_API_REST_API_ID,
-        },
-        Export: {
-          Name: "MyApiGateway-restApiId",
-        },
-      },
-      apiGatewayRestApiRootResourceId: {
-        Value:
-          // {
-          // "Fn::GetAtt": ["MyApiGW", "RootResourceId"],
-          process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
-
-        // },
-        Export: {
-          Name: "MyApiGateway-rootResourceId",
-        },
-      },
-    },
+    // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
   },
 };
 
