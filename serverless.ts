@@ -13,7 +13,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
-    stage: "v2",
+    stage: process.env.API_VERSION_STAGE,
     region: "us-west-2",
     endpointType: "regional",
     apiGateway: {
