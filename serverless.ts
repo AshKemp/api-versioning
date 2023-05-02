@@ -9,7 +9,7 @@ dotenv.config({ path: ".env.local" });
 const serverlessConfiguration: AWS = {
   service: "serverless-hello-world",
   frameworkVersion: "3",
-  plugins: ["serverless-esbuild", "serverless-offline", "serverless-aws-alias"],
+  plugins: ["serverless-esbuild", "serverless-offline"],
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
@@ -20,6 +20,10 @@ const serverlessConfiguration: AWS = {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
       restApiId: process.env.CLIENT_API_REST_API_ID,
+      restApiResources: {
+        path: "greeting",
+        resourceId: "i4sdqc",
+      },
       restApiRootResourceId: process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
     },
     environment: {
