@@ -20,11 +20,11 @@ const serverlessConfiguration: AWS = {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
       restApiId: process.env.CLIENT_API_REST_API_ID,
+      restApiRootResourceId: process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
       restApiResources: {
         path: "greeting",
         resourceId: "i4sdqc",
       },
-      restApiRootResourceId: process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
