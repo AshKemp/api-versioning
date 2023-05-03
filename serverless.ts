@@ -9,7 +9,11 @@ dotenv.config({ path: ".env.local" });
 const serverlessConfiguration: AWS = {
   service: "serverless-hello-world",
   frameworkVersion: "3",
-  plugins: ["serverless-esbuild", "serverless-offline"],
+  plugins: [
+    "serverless-esbuild",
+    "serverless-offline",
+    "serverless-stage-manager",
+  ],
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
@@ -47,6 +51,7 @@ const serverlessConfiguration: AWS = {
     //   concurrency: 10,
     // },
     // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
+    stages: ["v1", "v2"],
   },
 };
 
