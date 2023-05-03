@@ -9,11 +9,7 @@ dotenv.config({ path: ".env.local" });
 const serverlessConfiguration: AWS = {
   service: "serverless-hello-world",
   frameworkVersion: "3",
-  plugins: [
-    "serverless-esbuild",
-    "serverless-offline",
-    "serverless-stage-manager",
-  ],
+  plugins: ["serverless-esbuild", "serverless-offline"],
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
@@ -25,10 +21,10 @@ const serverlessConfiguration: AWS = {
       shouldStartNameWithService: true,
       restApiId: process.env.CLIENT_API_REST_API_ID,
       restApiRootResourceId: process.env.CLIENT_API_REST_API_ROOT_RESOURCE_ID,
-      restApiResources: {
-        path: "greeting",
-        resourceId: "i4sdqc",
-      },
+      // restApiResources: {
+      //   path: "greeting",
+      //   resourceId: "i4sdqc",
+      // },
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
