@@ -12,7 +12,6 @@ const serverlessConfiguration: AWS = {
   plugins: ["serverless-esbuild", "serverless-offline"],
   provider: {
     name: "aws",
-    apiName: "serverless-hello-world",
     runtime: "nodejs14.x",
     stage: process.env.API_VERSION_STAGE,
     region: "us-west-2",
