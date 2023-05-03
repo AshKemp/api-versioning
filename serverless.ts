@@ -51,7 +51,6 @@ const serverlessConfiguration: AWS = {
     //   concurrency: 10,
     // },
     // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
-    stages: ["v1", "v2"],
   },
 };
 
