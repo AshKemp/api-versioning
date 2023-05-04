@@ -48,6 +48,15 @@ const serverlessConfiguration: AWS = {
     // },
     // stage: `{opt:stage,${process.env.API_VERSION_STAGE}}`,
   },
+  // resources: {
+  //   extensions: {
+  //     HttpApiStage: {
+  //       Properties: {
+  //         StageName: "{self:provider.name}",
+  //       },
+  //     },
+  //   },
+  // },
 };
 
 module.exports = serverlessConfiguration;
