@@ -9,7 +9,11 @@ dotenv.config({ path: ".env.local" });
 const serverlessConfiguration: AWS = {
   service: "serverless-hello-world",
   frameworkVersion: "3",
-  plugins: ["serverless-esbuild", "serverless-offline"],
+  plugins: [
+    "serverless-esbuild",
+    "serverless-offline",
+    "serverless-aws-alias-v3",
+  ],
   // "serverless-aws-alias"],
   provider: {
     name: "aws",

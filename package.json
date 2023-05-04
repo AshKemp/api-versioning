@@ -22,6 +22,7 @@
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
     "serverless-aws-alias": "^1.8.0",
+    "serverless-aws-alias-v3": "^3.2.0",
     "serverless-esbuild": "^1.23.3",
     "serverless-stage-manager": "^1.0.5",
     "ts-node": "^10.4.0",
